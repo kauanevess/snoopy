@@ -1,0 +1,155 @@
+.final {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+  background: #f3eee5;
+}
+
+.folha {
+  position: relative;
+  width: min(700px, 90vw);
+  min-height: 850px;
+  background: #fffdf8;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  transform: rotate(-1deg);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.folha:hover {
+  transform: rotate(0deg) scale(1.015);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16);
+}
+
+.folha-fita {
+  position: absolute;
+  width: 125px;
+  height: 35px;
+  top: -17px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  background: rgba(218, 201, 166, 0.75);
+}
+
+.folha-conteudo {
+  position: relative;
+  min-height: 850px;
+  padding: 65px 65px 50px;
+}
+
+.folha-titulo {
+  margin: 0;
+  font-family: "Comic Sans MS", "Segoe Print", cursive;
+  font-size: 24px;
+  color: #29251f;
+}
+
+.espaco-escrita {
+  width: 100%;
+  min-height: 650px;
+}
+
+.folha-snoopy {
+  position: absolute;
+  width: 80px;
+  right: 45px;
+  bottom: 35px;
+}
+
+.pdf-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background: rgba(30, 27, 23, 0.82);
+}
+
+.pdf-container {
+  position: relative;
+  width: min(1000px, 95vw);
+  height: 90vh;
+  background: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.pdf-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.fechar-pdf {
+  position: absolute;
+  z-index: 2;
+  top: -15px;
+  right: -15px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #29251f;
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.fechar-pdf:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .final {
+    padding: 60px 18px;
+  }
+
+  .folha {
+    width: 92vw;
+    min-height: 650px;
+  }
+
+  .folha-conteudo {
+    min-height: 650px;
+    padding: 45px 30px 35px;
+  }
+
+  .folha-titulo {
+    font-size: 19px;
+  }
+
+  .espaco-escrita {
+    min-height: 480px;
+  }
+
+  .folha-snoopy {
+    width: 58px;
+    right: 25px;
+    bottom: 20px;
+  }
+
+  .folha-fita {
+    width: 95px;
+    height: 28px;
+    top: -14px;
+  }
+
+  .pdf-modal {
+    padding: 12px;
+  }
+
+  .pdf-container {
+    width: 100%;
+    height: 92vh;
+  }
+
+  .fechar-pdf {
+    top: -10px;
+    right: -5px;
+  }
+}
